@@ -10,18 +10,19 @@ using Newtonsoft.Json;
 using Microsoft.Identity.Client;
 using Newtonsoft.Json.Linq;
 using System.Net.Http;
-
+using sample.graph.fnApp.config;
 namespace sample.aad.usergroup.http.fnApp
 {
-    public static class fnAccessAadUser
+    public static class fnHTTPAccessAadUser
     {
-        [FunctionName("fnAccessAadUser")]
+        [FunctionName("fnHTTPAccessAadUser")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
 
+            
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             dynamic data = JsonConvert.DeserializeObject(requestBody);
             
