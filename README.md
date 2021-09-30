@@ -1,4 +1,4 @@
-# Power-of-Microsoft-Graph
+# Power of Microsoft Graph API
 
 Update Configuration Detail in file : Power-of-Microsoft-Graph/_code/power.microsoft.graph/sample.aad.user.msal.consoleApp/appsettings.json
 
